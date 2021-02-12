@@ -1,7 +1,7 @@
 import telebot
 import json
 
-bot = telebot.TeleBot('1489262010:AAENU2E27PWX-HswDGVWSGyLuACCOasmcTo')
+bot = telebot.TeleBot('token')
 
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True, False)
 keyboard1.row('Привет', 'Пока', 'Тест')
@@ -19,7 +19,9 @@ def send_text(message):
     elif message.text.lower() == 'пока':
         bot.send_message(message.chat.id, 'Пфф пока')
     elif message.text.lower() == 'тест':
-        bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAMsX-cUIHcnAWsC8x8tyavTEg3PwzwAAgoBAALuxKEKkj5OE68x5XgeBA')
+        bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAIBh2Amko7o2Lx8mN8DkLmhtqisNNSAAAIrAAN3L_UP6xQfPII3seMeBA')
+    elif message.text.lower() == 'оно работает!':
+        bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAIBYF_wJ2X256p_eX9SGcaIYmBcKYkJAAIKAQAC7sShCpI-ThOvMeV4HgQ')
 
 
 @bot.message_handler(content_types=['sticker'])
